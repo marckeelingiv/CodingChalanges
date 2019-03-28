@@ -1,16 +1,15 @@
-import random
+a = 5
+b = 6
+c = 7
 
-n = random.randint(1,99)
+# Uncomment below to take inputs from the user
+# a = float(input('Enter first side: '))
+# b = float(input('Enter second side: '))
+# c = float(input('Enter third side: '))
 
-guess = int(input("Enter an number between 1 and 99:"))
-print(n)
-while (n!=guess):
-    if guess < n:
-        print("Your guess is too low")
-        guess = int(input("Enter an number between 1 and 99:"))
-    elif guess > n:
-        print("Your guess is too high")
-        guess = int(input("Enter an number between 1 and 99:"))
-    else:
-        print("You guessed it!")
-        break
+# calculate the semi-perimeter
+s = (a + b + c) / 2
+
+# calculate the area
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+print('The area of the triangle is %0.2f' %area)
